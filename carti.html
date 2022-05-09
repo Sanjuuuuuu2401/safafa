@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    arrayT = JSON.parse(localStorage.getItem("aajkaarray"))
+
+    arrayT.forEach(function(elem){
+        var box = document.createElement("div")
+
+var image = document.createElement("img")
+image.setAttribute("src",elem.ivestorImage)
+var Name = document.createElement("h1")
+Name.innerText=elem.investorName
+var Role = document.createElement("h4")
+Name.innerText=elem.investorRole
+var imagelogo = document.createElement("img")
+imagelogo.setAttribute("src",elem.logo)
+box.append(image,Name,Role,imagelogo)
+document.querySelector("body").append(box)
+
+    })
+    
+</script>
